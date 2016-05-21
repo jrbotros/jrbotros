@@ -1,0 +1,33 @@
+{
+  "name": "personal-site-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrbotros/personal-site-2.git"
+  },
+  "author": "Joseph Botros",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrbotros/personal-site-2/issues"
+  },
+  "homepage": "https://github.com/jrbotros/personal-site-2#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
+  }
+}
