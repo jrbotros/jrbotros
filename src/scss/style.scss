@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+
+$tardis-blue: rgb(0, 62, 103);
+$blackbox-blue: #1b5299;
+$dark-gray: rgb(51, 51, 51);
+$dark-gray: rgb(225, 225, 225);
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+  color: $blackbox-blue;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 140px;
+  font-weight: 800;
+  letter-spacing: -13px;
+  line-height: 1em;
+  margin: 20px;
+  margin-bottom: -10px;
+  text-align: center;
+}
+
+.items {
+  border: 1px solid $dark-gray;
+}
+
+.main-content {
+  margin: 10vh 10vw;
+}
+
+aside {
+  left: 10vw;
+  position: fixed;
+  top: 10vh;
+  width: 30vw;
+}
+
+article {
+  margin-left: 30vw;
+  padding-left: 5vw;
+}
