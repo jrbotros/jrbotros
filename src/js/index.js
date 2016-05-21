@@ -2,7 +2,7 @@
   'use strict';
 
   // Stylesheets
-  require('sass/style.sass');
-
-  console.log('test webpack');
+  require('lib/normalize.css');
+  require('lib/skeleton.css');
+  require('scss/style.scss');
 })();

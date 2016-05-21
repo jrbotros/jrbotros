@@ -16,13 +16,22 @@
           test: /\.js$/,
           include: [
             path.resolve(__dirname, 'src/js'),
+            path.resolve(__dirname, 'src/lib'),
           ],
           loader: 'babel-loader'
         },
         {
-          test: /\.sass$/,
+          test: /\.css$/,
           include: [
-            path.resolve(__dirname, 'src/sass'),
+            // Vanilla CSS files should only live in imported libraries
+            path.resolve(__dirname, 'src/lib/'),
+          ],
+          loaders: ['style', 'css']
+        },
+        {
+          test: /\.scss$/,
+          include: [
+            path.resolve(__dirname, 'src/scss'),
           ],
           loaders: ['style', 'css', 'sass']
         }
@@ -32,6 +41,9 @@
       root: [
         path.resolve(__dirname, 'src'),
       ]
+    },
+    sassLoader: {
+      includePaths: [path.resolve(__dirname, 'src/scss')]
     }
   };
 })();
