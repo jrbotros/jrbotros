@@ -2,7 +2,8 @@
   'use strict';
 
   var path = require('path'),
-      webpack = require('webpack');
+      webpack = require('webpack'),
+      ExtractTextPlugin = require('extract-text-webpack-plugin');
 
   module.exports = {
     entry: './src/js/index.js',
@@ -11,32 +12,29 @@
       filename: 'bundle.js'
     },
     module: {
-      loaders: [
-        {
-          test: /\.js$/,
-          include: [
-            path.resolve(__dirname, 'src/js'),
-            path.resolve(__dirname, 'src/lib'),
-          ],
-          loader: 'babel-loader'
-        },
-        {
-          test: /\.css$/,
-          include: [
-            // Vanilla CSS files should only live in imported libraries
-            path.resolve(__dirname, 'src/lib/'),
-          ],
-          loaders: ['style', 'css']
-        },
-        {
-          test: /\.scss$/,
-          include: [
-            path.resolve(__dirname, 'src/scss'),
-          ],
-          loaders: ['style', 'css', 'sass']
+      loaders: [{
+        test: /.js$/,
+        loader: 'babel',
+        exclude: [/node_modules/, /.*\.min\.js/],
+        query: {
+          presets: ['es2015'],
+          // Enable object spread operator, which simplifies Redux reducers
+          // https://github.com/sebmarkbage/ecmascript-rest-spread
+          plugins: ['transform-object-rest-spread', 'transform-react-jsx']
         }
-      ]
+      }, {
+        test: /\.json$/,
+        loader: 'json-loader'
+      }, {
+        test: /\.s?css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+      }]
     },
+    plugins: [
+      new ExtractTextPlugin('bundle.css')
+      // TODO: enable when javascript is real
+      // new webpack.optimize.UglifyJsPlugin(),
+    ],
     resolve: {
       root: [
         path.resolve(__dirname, 'src'),
