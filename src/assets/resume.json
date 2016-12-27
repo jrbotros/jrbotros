@@ -99,11 +99,19 @@
   }],
   "education": [{
     "institution": "Harvard University",
-    "area": "Molecular and Cellular Biology, Computer Science",
-    "studyType": "Bachelor",
+    "area": "Molecular and Cellular Biology (Computer Science Secondary Field)",
+    "studyType": "B.A.",
     "startDate": "2011-09-01",
     "endDate": "2015-06-01",
-    "gpa": "3.83"
+    "gpa": "3.83",
+    "awards": ["magna cum laude"]
+  }, {
+    "institution": "Terre Haute South Vigo High School",
+    "studyType": "High School Diploma",
+    "startDate": "2007-09-01",
+    "endDate": "2011-06-01",
+    "gpa": "4.00",
+    "awards": ["Valedictorian", "Indiana Mr. Science", "SAT 2400"]
   }],
   "publications": [{
     "name": "Vials: Visualizing Alternative Splicing of Genes",
