@@ -13,7 +13,11 @@ import Vivus from 'vivus'
 
 import resume from 'assets/resume.json'
 
-const prettyDate = date => moment(date).format('MMMM YYYY')
+const prettyDate = date => (
+  <span style={{'whiteSpace': 'nowrap'}}>
+    {moment(date).format('MMMM YYYY')}
+  </span>
+)
 const jobDateRange = job => {
   let endDate = job.endDate ? prettyDate(job.endDate) : 'Present'
   return <span className="resume-job__date-range">{prettyDate(job.startDate)} – {endDate}</span>
@@ -66,24 +70,80 @@ class ResumeJob extends React.Component {
 class Resume extends React.Component {
   render () {
     return (
-      <div>
+      <section className="resume">
         <h1>xp</h1>
         <div className="resume-items">
           {map(resume.work, job => <ResumeJob key={job.company + job.position} job={job} />)}
         </div>
+      </section>
+    )
+  }
+}
+
+class EducationItem extends React.Component {
+  render () {
+    let studyInfo = this.props.education.studyType
+    if (this.props.education.studyType) {
+      studyInfo = (
+        <div className="education__degree">
+          {this.props.education.studyType} {this.props.education.area ? 'in ' + this.props.education.area : ''}
+        </div>
+      )
+    }
+    return (
+      <div className="education-item">
+        <div className="education-item__header">
+          <div className="education-item__institution">{this.props.education.institution}</div>
+          <div className="education-item__date-range">{jobDateRange(this.props.education)}</div>
+        </div>
+        <div className="education-item__details">
+          {studyInfo}
+          <div className="education-item__grade">GPA: {this.props.education.gpa}</div>
+        </div>
+        <ul className="education-item__awards">
+          {map(this.props.education.awards, award => <li key={award}>{award}</li>)}
+        </ul>
+      </div>
+    )
+  }
+}
+
+class Education extends React.Component {
+  render () {
+    return (
+      <section className="education">
+        <h1>edu</h1>
+        {map(resume.education, education => <EducationItem key={education.institution} education={education} />)}
+      </section>
+    )
+  }
+}
+
+class Main extends React.Component {
+  render () {
+    return (
+      <div>
+        <Education />
+        <Resume />
       </div>
     )
   }
 }
 
 ReactDOM.render(
-  <Resume />,
-  document.getElementById('resume')
+  <Main />,
+  document.getElementById('main')
 );
 
-new Vivus('logo', {
-  duration: 200,
-  animTimingFunction: Vivus.EASE
-}, () => {
-  document.querySelector('.icon-github').classList.add('show')
-})
+new Vivus(
+  'logo', {
+    type: 'delayed',
+    duration: 200,
+    animTimingFunction: Vivus.EASE,
+    onReady: function (myVivus) {
+      myVivus.el.style.visibility = 'inherit';
+    }
+  }, () => {
+    document.querySelector('.icon-github').classList.add('show')
+  }
+);

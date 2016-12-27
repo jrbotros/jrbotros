@@ -10,6 +10,8 @@ $default-padding: 50px;
 $serif-stack: 'Cardo', sans-serif;
 $sans-stack: 'Open Sans', sans-serif;
 
+$border-radius: 5px;
+
 %uppercase-spaced {
   font-family: $sans-stack;
   font-size: 1.5rem;
@@ -91,13 +93,15 @@ a {
 
 .logo-wrapper {
   position: relative;
-  width: 10vw;
+  width: 25%;
+  min-width: 150px;
   margin: 0 auto;
 }
 
 #logo {
+  visibility: hidden;
   path {
-    stroke-width: 1vw;
+    stroke-width: 10px;
     stroke: black;
     fill: none;
   }
@@ -106,6 +110,10 @@ a {
 .main {
   max-width: 600px;
   margin: 0 auto;
+}
+
+section {
+  margin-top: 4rem;
 }
 
 .profile-card {
@@ -136,6 +144,7 @@ $profile-card-photo-width: 40%;
   padding: 3px;
   border-top: 3px solid $blackbox-blue;
 }
+
 .profile-card__quote {
   $padding: 5%;
   font-size: 2rem;
@@ -145,22 +154,58 @@ $profile-card-photo-width: 40%;
   width: 100% - $profile-card-photo-width - $padding * 2;
 }
 
+.education-item {
+  &:not(:last-child) {
+    padding-bottom: 2rem;
+  }
+  .education-item__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .education-item__date-range {
+    text-align: right;
+  }
+  .education-item__institution {
+    @extend %uppercase-spaced;
+  }
+  .education-item__details {
+    display: flex;
+    justify-content: space-between;
+  }
+  .education-item__grade {
+    text-align: right;
+  }
+  .education-item__awards {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 0.25em;
+    li {
+      display: inline-block;
+      border-radius: $border-radius;
+      border: 1px solid $blackbox-blue;
+      color: $blackbox-blue;
+      padding: 0.25em 0.5em;
+      &:not(:last-child) {
+        margin-right: 0.5em;
+      }
+    }
+  }
+}
+
 .resume-job {
   position: relative;
   margin-bottom: 3rem;
   .resume-job__header {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .resume-job__date-range {
+    text-align: right;
   }
   .resume-job__company {
     @extend %uppercase-spaced;
     margin-bottom: 0;
-  }
-  .resume-job__date-range {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
   }
   .resume-job__details {
     padding: 10px 0;
@@ -203,7 +248,7 @@ $profile-card-photo-width: 40%;
     display: block;
     height: 100%;
     border: 1px solid $blackbox-blue;
-    border-radius: 5px;
+    border-radius: $border-radius;
     background-size: cover;
     background-position: 50% 0;
     background-repeat: no-repeat;
