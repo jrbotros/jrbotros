@@ -12,7 +12,7 @@ $sans-stack: 'Open Sans', sans-serif;
 
 %uppercase-spaced {
   font-family: $sans-stack;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -27,10 +27,6 @@ body {
   color: $dark-gray;
 }
 
-header {
-  position: fixed;
-}
-
 .icon-github {
   position: absolute;
   bottom: 25%;
@@ -39,7 +35,7 @@ header {
   height: auto;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
   &:hover {
     cursor: default;
     path {
@@ -93,8 +89,13 @@ a {
   }
 }
 
-#logo {
+.logo-wrapper {
+  position: relative;
   width: 10vw;
+  margin: 0 auto;
+}
+
+#logo {
   path {
     stroke-width: 1vw;
     stroke: black;
@@ -103,39 +104,33 @@ a {
 }
 
 .main {
-  margin-left: 10vw;
-  width: 90vw;
-}
-
-section {
-  max-width: 660px;
-  width: 60%;
-  margin: 3rem 20%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .profile-card {
   overflow: auto;
+  position: relative;
 }
 
 $profile-card-photo-width: 40%;
 .profile-card__photo {
-  position: relative;
   width: $profile-card-photo-width;
   display: block;
-  // float: left;
-  margin: 0 (100% - $profile-card-photo-width) / 2;
   img {
     width: 100%;
+    border-radius: 50%;
     display: block;
   }
 }
 .profile-card__name {
   @extend %uppercase-spaced;
-  text-align: center;
+  font-size: 4rem;
+  text-align: right;
   position: absolute;
   bottom: 0;
-  left: -100%;
-  right: -100%;
+  left: 0;
+  right: 0;
   background-color: rgba($white, 0.8);
   color: $blackbox-blue;
   padding: 3px;
@@ -151,6 +146,7 @@ $profile-card-photo-width: 40%;
 }
 
 .resume-job {
+  position: relative;
   margin-bottom: 3rem;
   .resume-job__header {
     position: relative;
@@ -159,11 +155,12 @@ $profile-card-photo-width: 40%;
     @extend %uppercase-spaced;
     margin-bottom: 0;
   }
-  .resume-job__dateRange {
+  .resume-job__date-range {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 1.2rem;
   }
   .resume-job__details {
     padding: 10px 0;
@@ -187,5 +184,48 @@ $profile-card-photo-width: 40%;
         left: -5px;
       }
     }
+  }
+  .resume-job__projects {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin: 0 -2rem;
+    li {
+      flex: 1 1 250px;
+      margin: 2rem;
+      height: 200px;
+    }
+  }
+  .resume-job__project {
+    position: relative;
+    display: block;
+    height: 100%;
+    border: 1px solid $blackbox-blue;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+  .resume-job__project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba($blackbox-blue, 0.9);
+    color: white;
+  }
+  .resume-job__project-name {
+    @extend %uppercase-spaced;
+    font-size: 1.2rem;
+    color: inherit;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+  .resume-job__project-description {
+    font-size: 1.1rem;
   }
 }

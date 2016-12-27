@@ -19,23 +19,33 @@
   "work": [{
     "company": "B12",
     "position": "Software Engineer",
-    "website": "orchestra.unlimitedlabs.com",
     "startDate": "2015-07-01",
     "highlights": [
       "Design and implement interactive user experiences for web designers and clients",
       "Build workflow automation and distribution tools as a core contributor to Orchestra",
       "Develop deployment and asynchronous task management tooling (Docker/AWS)"
-    ]
+    ],
+    "projects": [{
+      "name": "Orchestra",
+      "description": "An open source system to orchestrate teams of experts and machines on complex projects",
+      "website": "http://orchestra.b12.io",
+      "image": "img/orchestra.jpg"
+    }]
   },
   {
     "company": "Harvard University",
     "position": "Visualization Engineer",
-    "website": "vials.io/info",
     "startDate": "2014-09-01",
     "endDate": "2015-07-01",
     "highlights": [
       "Designed and implemented novel tool components for visualizing alternative splicing isoforms"
-    ]
+    ],
+    "projects": [{
+      "name": "VIALS",
+      "description": "A novel visualization tool for alternative gene splicing study",
+      "website": "http://vials.io/info",
+      "image": "img/vials.png"
+    }]
   },
   {
     "company": "Novartis Institutes for BioMedical Research",
@@ -56,7 +66,18 @@
       "Acted as main designer for The Crimson’s first ten online multimedia features, two winning placement in the top five Associated College Press Multimedia Features of the Year",
       "Implemented a full-scale restructuring of The Crimson’s codebase as the head of a team of three, and coordinated a responsive redesign of the website (increasing pageviews by 30%)",
       "Supervised a development team of 20 programmers and web designers"
-    ]
+    ],
+    "projects": [{
+      "name": "Responsive Redesign",
+      "description": "Redesign of The Crimson's web properties",
+      "website": "http://web.archive.org/web/20140625091927/http://www.thecrimson.com/",
+      "image": "img/crimson.png"
+    }, {
+      "name": "Hacking Harvard",
+      "description": "Sample design created for a news feature",
+      "website": "http://features.thecrimson.com/2013/hackers/",
+      "image": "img/hackers.png"
+    }]
   },
   {
     "company": "The Harvard Crimson",
