@@ -71,7 +71,7 @@ class Resume extends React.Component {
   render () {
     return (
       <section className="resume">
-        <h1>xp</h1>
+        <h1>exp</h1>
         <div className="resume-items">
           {map(resume.work, job => <ResumeJob key={job.company + job.position} job={job} />)}
         </div>
