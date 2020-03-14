@@ -10,114 +10,130 @@
       "countryCode": "US",
       "region": "NY"
     },
-    "profiles": [{
-      "network": "Github",
-      "username": "jrbotros",
-      "url": "github.com/jrbotros"
-    }]
-  },
-  "work": [{
-    "company": "B12",
-    "position": "Software Engineer",
-    "startDate": "2015-07-01",
-    "highlights": [
-      "Design and implement interactive user experiences for web designers and clients",
-      "Build workflow automation and distribution tools as a core contributor to Orchestra",
-      "Develop deployment and asynchronous task management tooling (Docker/AWS)"
-    ],
-    "projects": [{
-      "name": "Orchestra",
-      "description": "An open source system to orchestrate teams of experts and machines on complex projects",
-      "website": "http://orchestra.b12.io",
-      "image": "img/orchestra.jpg"
-    }]
-  },
-  {
-    "company": "Harvard University",
-    "position": "Visualization Engineer",
-    "startDate": "2014-09-01",
-    "endDate": "2015-07-01",
-    "highlights": [
-      "Designed and implemented novel tool components for visualizing alternative splicing isoforms"
-    ],
-    "projects": [{
-      "name": "VIALS",
-      "description": "A novel visualization tool for alternative gene splicing study",
-      "website": "http://vials.io/info",
-      "image": "img/vials.png"
-    }]
-  },
-  {
-    "company": "Novartis Institutes for BioMedical Research",
-    "position": "Data Engineer",
-    "startDate": "2014-06-01",
-    "endDate": "2014-12-01",
-    "highlights": [
-      "Evaluated DBMSs and distributed computing systems for use in bioinformatics applications",
-      "Automated deployment of these technologies to Novartis computing clusters using Chef and Fabric"
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "jrbotros",
+        "url": "github.com/jrbotros"
+      }
     ]
   },
-  {
-    "company": "The Harvard Crimson",
-    "position": "Director of Web Development",
-    "startDate": "2013-01-01",
-    "endDate": "2014-06-01",
-    "highlights": [
-      "Acted as main designer for The Crimson’s first ten online multimedia features, two winning placement in the top five Associated College Press Multimedia Features of the Year",
-      "Implemented a full-scale restructuring of The Crimson’s codebase as the head of a team of three, and coordinated a responsive redesign of the website (increasing pageviews by 30%)",
-      "Supervised a development team of 20 programmers and web designers"
-    ],
-    "projects": [{
-      "name": "Responsive Redesign",
-      "description": "Redesign of The Crimson's web properties",
-      "website": "http://web.archive.org/web/20140625091927/http://www.thecrimson.com/",
-      "image": "img/crimson.png"
-    }, {
-      "name": "Hacking Harvard",
-      "description": "Sample design created for a news feature",
-      "website": "http://features.thecrimson.com/2013/hackers/",
-      "image": "img/hackers.png"
-    }]
-  },
-  {
-    "company": "The Harvard Crimson",
-    "position": "Summer Business Manager",
-    "startDate": "2013-06-01",
-    "endDate": "2014-08-01",
-    "highlights": [
-      "Led the organization’s summer sales team of five to bring in over $118,000 in advertising revenue"
-    ]
-  },
-  {
-    "company": "Harvard University",
-    "position": "Molecular Biology Researcher",
-    "startDate": "2012-06-01",
-    "endDate": "2013-12-01",
-    "highlights": [
-      "Studied the functionality of sidt2, a human gene encoding a double-stranded RNA transporter protein"
-    ]
-  }],
-  "education": [{
-    "institution": "Harvard University",
-    "area": "Molecular and Cellular Biology (Computer Science Secondary Field)",
-    "studyType": "B.A.",
-    "startDate": "2011-09-01",
-    "endDate": "2015-06-01",
-    "gpa": "3.83",
-    "awards": ["magna cum laude"]
-  }, {
-    "institution": "Terre Haute South Vigo High School",
-    "studyType": "High School Diploma",
-    "startDate": "2007-09-01",
-    "endDate": "2011-06-01",
-    "gpa": "4.00",
-    "awards": ["Valedictorian", "Indiana Mr. Science", "SAT 2400"]
-  }],
-  "publications": [{
-    "name": "Vials: Visualizing Alternative Splicing of Genes",
-    "publisher": "IEEE Computer Society",
-    "releaseDate": "2015-08-12",
-    "website": "http://dx.doi.org/10.1109/TVCG.2015.2467911",
-    "summary": "Alternative splicing is a process by which the same DNA sequence is used to assemble different proteins, called protein isoforms. Alternative splicing works by selectively omitting some of the coding regions (exons) typically associated with a gene. Detection of alternative splicing is difficult and uses a combination of advanced data acquisition methods and statistical inference. Knowledge about the abundance of isoforms is important for understanding both normal processes and diseases and to eventually improve treatment through targeted therapies. The data, however, is complex and current visualizations for isoforms are neither perceptually efficient nor scalable. To remedy this, we developed Vials, a novel visual analysis tool that enables analysts to explore the various datasets that scientists use to make judgments about isoforms: the abundance of reads associated with the coding regions of the gene, evidence for junctions, i.e., edges connecting the coding regions, and predictions of isoform frequencies. Vials is scalable as it allows for the simultaneous analysis of many samples in multiple groups. Our tool thus enables experts to (a) identify patterns of isoform abundance in groups of samples and (b) evaluate the quality of the data. We demonstrate the value of our tool in case studies using publicly available datasets."
-  }]
+  "work": [
+    {
+      "company": "B12",
+      "position": "Software Engineer",
+      "startDate": "2015-07-01",
+      "highlights": [
+        "Design and implement interactive user experiences for web designers and clients",
+        "Build workflow automation and distribution tools as a core contributor to Orchestra",
+        "Develop deployment and asynchronous task management tooling (Docker/AWS)"
+      ],
+      "projects": [
+        {
+          "name": "Orchestra",
+          "description": "An open source system to orchestrate teams of experts and machines on complex projects",
+          "website": "http://orchestra.b12.io",
+          "image": "img/orchestra.jpg"
+        }
+      ]
+    },
+    {
+      "company": "Harvard University",
+      "position": "Visualization Engineer",
+      "startDate": "2014-09-01",
+      "endDate": "2015-07-01",
+      "highlights": [
+        "Designed and implemented novel tool components for visualizing alternative splicing isoforms"
+      ],
+      "projects": [
+        {
+          "name": "VIALS",
+          "description": "A novel visualization tool for alternative gene splicing study",
+          "website": "http://vials.io/info",
+          "image": "img/vials.png"
+        }
+      ]
+    },
+    {
+      "company": "Novartis Institutes for BioMedical Research",
+      "position": "Data Engineer",
+      "startDate": "2014-06-01",
+      "endDate": "2014-12-01",
+      "highlights": [
+        "Evaluated DBMSs and distributed computing systems for use in bioinformatics applications",
+        "Automated deployment of these technologies to Novartis computing clusters using Chef and Fabric"
+      ]
+    },
+    {
+      "company": "The Harvard Crimson",
+      "position": "Director of Web Development",
+      "startDate": "2013-01-01",
+      "endDate": "2014-06-01",
+      "highlights": [
+        "Acted as main designer for The Crimson’s first ten online multimedia features, two winning placement in the top five Associated College Press Multimedia Features of the Year",
+        "Implemented a full-scale restructuring of The Crimson’s codebase as the head of a team of three, and coordinated a responsive redesign of the website (increasing pageviews by 30%)",
+        "Supervised a development team of 20 programmers and web designers"
+      ],
+      "projects": [
+        {
+          "name": "Responsive Redesign",
+          "description": "Redesign of The Crimson's web properties",
+          "website": "http://web.archive.org/web/20140625091927/http://www.thecrimson.com/",
+          "image": "img/crimson.png"
+        },
+        {
+          "name": "Hacking Harvard",
+          "description": "Sample design created for a news feature",
+          "website": "http://features.thecrimson.com/2013/hackers/",
+          "image": "img/hackers.png"
+        }
+      ]
+    },
+    {
+      "company": "The Harvard Crimson",
+      "position": "Summer Business Manager",
+      "startDate": "2013-06-01",
+      "endDate": "2014-08-01",
+      "highlights": [
+        "Led the organization’s summer sales team of five to bring in over $118,000 in advertising revenue"
+      ]
+    },
+    {
+      "company": "Harvard University",
+      "position": "Molecular Biology Researcher",
+      "startDate": "2012-06-01",
+      "endDate": "2013-12-01",
+      "highlights": [
+        "Studied the functionality of sidt2, a human gene encoding a double-stranded RNA transporter protein"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Harvard University",
+      "area": "Molecular and Cellular Biology (Computer Science Secondary Field)",
+      "studyType": "B.A.",
+      "startDate": "2011-09-01",
+      "endDate": "2015-06-01",
+      "gpa": "3.83",
+      "awards": ["magna cum laude"]
+    },
+    {
+      "institution": "Terre Haute South Vigo High School",
+      "studyType": "High School Diploma",
+      "startDate": "2007-09-01",
+      "endDate": "2011-06-01",
+      "gpa": "4.00",
+      "awards": ["Valedictorian", "Indiana Mr. Science", "SAT 2400"]
+    }
+  ],
+  "publications": [
+    {
+      "name": "Vials: Visualizing Alternative Splicing of Genes",
+      "publisher": "IEEE Computer Society",
+      "releaseDate": "2015-08-12",
+      "website": "http://dx.doi.org/10.1109/TVCG.2015.2467911",
+      "summary": "Alternative splicing is a process by which the same DNA sequence is used to assemble different proteins, called protein isoforms. Alternative splicing works by selectively omitting some of the coding regions (exons) typically associated with a gene. Detection of alternative splicing is difficult and uses a combination of advanced data acquisition methods and statistical inference. Knowledge about the abundance of isoforms is important for understanding both normal processes and diseases and to eventually improve treatment through targeted therapies. The data, however, is complex and current visualizations for isoforms are neither perceptually efficient nor scalable. To remedy this, we developed Vials, a novel visual analysis tool that enables analysts to explore the various datasets that scientists use to make judgments about isoforms: the abundance of reads associated with the coding regions of the gene, evidence for junctions, i.e., edges connecting the coding regions, and predictions of isoform frequencies. Vials is scalable as it allows for the simultaneous analysis of many samples in multiple groups. Our tool thus enables experts to (a) identify patterns of isoform abundance in groups of samples and (b) evaluate the quality of the data. We demonstrate the value of our tool in case studies using publicly available datasets."
+    }
+  ]
 }
