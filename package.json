@@ -20,23 +20,23 @@
   },
   "homepage": "https://github.com/jrbotros/personal-site-2#readme",
   "dependencies": {
-    "moment-timezone": "^0.5.9",
-    "vivus": "^0.4.0"
+    "moment-timezone": "0.5.9",
+    "vivus": "0.4.0"
   },
   "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.8",
-    "babel-plugin-transform-object-rest-spread": "^6.19.0",
-    "babel-plugin-transform-react-jsx": "^6.8.0",
-    "babel-preset-es2015": "^6.18.0",
-    "css-loader": "^0.23.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "json-loader": "^0.5.4",
-    "node-sass": "^3.7.0",
-    "react": "^15.4.0",
-    "react-dom": "^15.4.0",
-    "sass-loader": "^3.2.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
+    "babel-core": "6.18.2",
+    "babel-loader": "6.2.8",
+    "babel-plugin-transform-object-rest-spread": "6.19.0",
+    "babel-plugin-transform-react-jsx": "6.8.0",
+    "babel-preset-es2015": "6.18.0",
+    "css-loader": "0.23.1",
+    "extract-text-webpack-plugin": "1.0.1",
+    "json-loader": "0.5.4",
+    "node-sass": "3.7.0",
+    "react": "15.4.0",
+    "react-dom": "15.4.0",
+    "sass-loader": "3.2.0",
+    "style-loader": "0.13.1",
+    "webpack": "1.13.1"
   }
 }
