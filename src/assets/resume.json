@@ -20,13 +20,25 @@
   },
   "work": [
     {
+      "company": "Oscar Health",
+      "position": "Senior Software Engineer",
+      "startDate": "2017-07-24",
+      "highlights": [
+        "Currently focusing on shared gRPC infrastructure and tooling (configuration/codegen, monitoring)",
+        "Serving as a core owner/contributor of org-wide frontend tooling (React + hooks)",
+        "Acted as team lead for provider-facing care delivery app with EHR functionality (React + hooks, Python/Flask, Thrift/gRPC)",
+        "Rebuilt telemedicine system architecture from the ground up (Thrift/gRPC, Aurora/Mesos, Confluent Kafka)"
+      ]
+    },
+    {
       "company": "B12",
       "position": "Software Engineer",
       "startDate": "2015-07-01",
+      "endDate": "2017-07-01",
       "highlights": [
-        "Design and implement interactive user experiences for web designers and clients",
-        "Build workflow automation and distribution tools as a core contributor to Orchestra",
-        "Develop deployment and asynchronous task management tooling (Docker/AWS)"
+        "Led front-end development for the company’s core website builder (Angular/Redux/ES6/Webpack)",
+        "Built workflow automation tools as a core contributor to Orchestra (Django/Angular)",
+        "Developed deployment and asynchronous task management tooling (Docker/AWS)"
       ],
       "projects": [
         {
@@ -43,7 +55,8 @@
       "startDate": "2014-09-01",
       "endDate": "2015-07-01",
       "highlights": [
-        "Designed and implemented novel tool components for visualizing alternative splicing isoforms"
+        "Designed and implemented novel tool components for visualizing alternative splicing isoforms",
+        "Co-authored <em>Vials: Visualizing Alternative Splicing of Genes</em> in IEEE TVCG (<a href=\"http://vials.io/info\" target=\"_blank\">preprint</a>)"
       ],
       "projects": [
         {
