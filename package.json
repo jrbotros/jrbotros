@@ -7,18 +7,18 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "aws --profile personal s3 sync site/ s3://www.jrbotros.com --acl public-read"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jrbotros/personal-site-2.git"
+    "url": "git+https://github.com/jrbotros/jrbotros.git"
   },
   "author": "Joseph Botros",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jrbotros/personal-site-2/issues"
+    "url": "https://github.com/jrbotros/jrbotros/issues"
   },
-  "homepage": "https://github.com/jrbotros/personal-site-2#readme",
+  "homepage": "https://github.com/jrbotros/jrbotros",
   "dependencies": {
     "moment-timezone": "0.5.9",
     "vivus": "0.4.0"

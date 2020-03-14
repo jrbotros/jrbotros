@@ -58,7 +58,7 @@ class ResumeJob extends React.Component {
         <div className="resume-job__details">
           <span className="resume-job__position">{this.props.job.position}</span>
           <ul className="resume-job__highlights">
-            {map(this.props.job.highlights, (highlight, i) => <li key={i}>{highlight}</li>)}
+            {map(this.props.job.highlights, (highlight, i) => <li key={i} dangerouslySetInnerHTML={{ __html: highlight }}></li>)}
           </ul>
           {projects}
         </div>
