@@ -23,6 +23,7 @@
   "dependencies": {
     "classnames": "2.2.6",
     "moment-timezone": "0.5.9",
+    "react-favicon": "0.0.18",
     "vivus": "0.4.0"
   },
   "devDependencies": {
