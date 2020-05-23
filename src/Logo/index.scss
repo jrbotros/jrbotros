@@ -1,0 +1,41 @@
+@import "constants.scss";
+
+.logoWrapper {
+  position: relative;
+  width: 25%;
+  min-width: 150px;
+  margin: 0 auto;
+}
+
+.logo {
+  visibility: hidden;
+  path {
+    stroke-width: 10px;
+    stroke: black;
+    fill: none;
+  }
+}
+
+.iconGithub {
+  position: absolute;
+  bottom: 25%;
+  left: 45%;
+  width: 30%;
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  &:hover {
+    cursor: default;
+    path {
+      fill: $blackbox-blue;
+    }
+  }
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

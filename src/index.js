@@ -4,31 +4,21 @@ import "index.scss";
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Vivus from "vivus";
 
+import { Logo } from "./Logo";
 import { Resume } from "./Resume";
 
 const Main = () => {
   return (
-    <div>
-      <Resume />
-    </div>
+    <React.Fragment>
+      <header>
+        <Logo />
+      </header>
+      <div>
+        <Resume />
+      </div>
+    </React.Fragment>
   );
 };
 
 ReactDOM.render(<Main />, document.getElementById("main"));
-
-new Vivus(
-  "logo",
-  {
-    type: "delayed",
-    duration: 200,
-    animTimingFunction: Vivus.EASE,
-    onReady: function (myVivus) {
-      myVivus.el.style.visibility = "inherit";
-    },
-  },
-  () => {
-    document.querySelector(".icon-github").classList.add("show");
-  }
-);

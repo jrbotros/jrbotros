@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jrbotros/jrbotros",
   "dependencies": {
+    "classnames": "2.2.6",
     "moment-timezone": "0.5.9",
     "vivus": "0.4.0"
   },
