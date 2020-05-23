@@ -43,13 +43,13 @@
     }
   }
 
-  #main {
+  section {
+    margin-bottom: 4rem;
+  }
+
+  .main {
     max-width: 600px;
     margin: 0 auto;
     min-height: 100vh;
-  }
-
-  section {
-    margin-bottom: 4rem;
   }
 }

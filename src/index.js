@@ -1,22 +1,22 @@
-import "index.scss";
-
 import React from "react";
 import ReactDOM from "react-dom";
 
 import { Logo } from "./Logo";
 import { Resume } from "./Resume";
 
+import css from "index.scss";
+
 const Main = () => {
   return (
-    <React.Fragment>
+    <div className={css.main}>
       <header>
         <Logo />
       </header>
       <div>
         <Resume />
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
-ReactDOM.render(<Main />, document.getElementById("main"));
+ReactDOM.render(<Main />, document.getElementById("mount"));
