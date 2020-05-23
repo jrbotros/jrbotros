@@ -9,6 +9,8 @@
   body {
     font-family: $serif-stack;
     font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
     padding: $default-padding;
     padding-bottom: 0;
     color: $dark-gray;
@@ -21,7 +23,7 @@
 
   h1 {
     display: block;
-    margin-bottom: 3rem;
+    margin: 0 0 3rem;
     font-family: $sans-stack;
     font-size: 64px;
     font-weight: 100;
@@ -46,10 +48,10 @@
   section {
     margin-bottom: 4rem;
   }
+}
 
-  .main {
-    max-width: 600px;
-    margin: 0 auto;
-    min-height: 100vh;
-  }
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
 }
