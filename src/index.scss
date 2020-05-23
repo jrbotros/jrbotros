@@ -11,14 +11,12 @@
     font-size: 1.2rem;
     line-height: 1.6;
     margin: 0;
-    padding: $default-padding;
-    padding-bottom: 0;
+    padding: 0;
     color: $dark-gray;
   }
 
-  footer {
-    border-top: 3px solid $blackbox-blue;
-    margin: 0 (-$default-padding);
+  #mount {
+    border-bottom: 3px solid $blackbox-blue;
   }
 
   h1 {
@@ -54,4 +52,5 @@
   max-width: 600px;
   margin: 0 auto;
   min-height: 100vh;
+  padding: $default-padding;
 }

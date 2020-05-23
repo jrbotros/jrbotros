@@ -8,7 +8,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "deploy": "aws --profile personal s3 sync site/ s3://www.jrbotros.com --acl public-read"
+    "deploy": "webpack && aws --profile personal s3 sync site/ s3://www.jrbotros.com --acl public-read"
   },
   "repository": {
     "type": "git",
