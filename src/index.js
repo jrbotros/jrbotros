@@ -1,5 +1,4 @@
 import "lib/normalize.css";
-import "lib/skeleton.css";
 import "index.scss";
 
 import React from "react";

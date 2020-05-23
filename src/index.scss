@@ -1,9 +1,14 @@
 @import "constants.scss";
 
 :global {
+  html {
+    // html is set to 62.5% so that all REM measurements are based on 10px sizing
+    font-size: 62.5%;
+  }
+
   body {
     font-family: $serif-stack;
-    font-size: 12px;
+    font-size: 1.2rem;
     padding: $default-padding;
     padding-bottom: 0;
     color: $dark-gray;
