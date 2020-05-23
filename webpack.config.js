@@ -1,47 +1,43 @@
-(function() {
-  'use strict';
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-  var path = require('path'),
-      webpack = require('webpack'),
-      ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-  module.exports = {
-    entry: './src/js/index.js',
-    output: {
-      path: './site/build',
-      filename: 'bundle.js'
-    },
-    module: {
-      loaders: [{
+module.exports = {
+  entry: './src/js/index.js',
+  output: {
+    path: path.resolve(__dirname, 'site/build'),
+    filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
         test: /.js$/,
-        loader: 'babel',
-        exclude: [/node_modules/, /.*\.min\.js/],
-        query: {
-          presets: ['es2015'],
-          // Enable object spread operator, which simplifies Redux reducers
-          // https://github.com/sebmarkbage/ecmascript-rest-spread
-          plugins: ['transform-object-rest-spread', 'transform-react-jsx']
+        exclude: [/node_modules/, /.*\.min\.js$/],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: ['@babel/plugin-proposal-object-rest-spread']
+          }
         }
-      }, {
-        test: /\.json$/,
-        loader: 'json-loader'
-      }, {
+      },
+      {
         test: /\.s?css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
-      }]
-    },
-    plugins: [
-      new ExtractTextPlugin('bundle.css')
-      // TODO: enable when javascript is real
-      // new webpack.optimize.UglifyJsPlugin(),
+        exclude: /node_modules/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ],
+      }
     ],
-    resolve: {
-      root: [
-        path.resolve(__dirname, 'src'),
-      ]
-    },
-    sassLoader: {
-      includePaths: [path.resolve(__dirname, 'src/scss'), path.resolve(__dirname, 'node_modules')]
-    }
-  };
-})();
+  },
+  plugins: [
+    new MiniCssExtractPlugin(),
+  ],
+  resolve: {
+    modules: [
+      path.resolve(__dirname, 'src'),
+      path.resolve(__dirname, 'node_modules'),
+    ],
+  },
+};
