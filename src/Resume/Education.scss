@@ -1,0 +1,65 @@
+@charset 'UTF-8';
+
+$white: #fff;
+$tardis-blue: rgb(0, 62, 103);
+$blackbox-blue: #1b5299;
+$dark-gray: rgb(51, 51, 51);
+
+$header-height: 140px;
+$default-padding: 50px;
+$serif-stack: 'Cardo', sans-serif;
+$sans-stack: 'Open Sans', sans-serif;
+
+$border-radius: 5px;
+
+%uppercase-spaced {
+  font-family: $sans-stack;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $blackbox-blue;
+}
+
+.educationItem:not(:last-child) {
+  padding-bottom: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dateRange {
+  text-align: right;
+}
+
+.institution {
+  @extend %uppercase-spaced;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grade {
+  text-align: right;
+}
+
+.awards {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 0.25em;
+  li {
+    display: inline-block;
+    border-radius: $border-radius;
+    border: 1px solid $blackbox-blue;
+    color: $blackbox-blue;
+    padding: 0.25em 0.5em;
+    &:not(:last-child) {
+      margin-right: 0.5em;
+    }
+  }
+}
