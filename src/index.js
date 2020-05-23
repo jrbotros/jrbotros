@@ -1,4 +1,3 @@
-import "lib/normalize.css";
 import "index.scss";
 
 import React from "react";
