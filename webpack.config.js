@@ -1,11 +1,11 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, 'site/build'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, "site/build"),
+    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -13,12 +13,12 @@ module.exports = {
         test: /.js$/,
         exclude: [/node_modules/, /.*\.min\.js$/],
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-proposal-object-rest-spread']
-          }
-        }
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+            plugins: ["@babel/plugin-proposal-object-rest-spread"],
+          },
+        },
       },
       {
         test: /\.s?css$/,
@@ -26,23 +26,21 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               modules: true,
-            }
+            },
           },
-          'sass-loader',
+          "sass-loader",
         ],
-      }
+      },
     ],
   },
-  plugins: [
-    new MiniCssExtractPlugin(),
-  ],
+  plugins: [new MiniCssExtractPlugin()],
   resolve: {
     modules: [
-      path.resolve(__dirname, 'src'),
-      path.resolve(__dirname, 'node_modules'),
+      path.resolve(__dirname, "src"),
+      path.resolve(__dirname, "node_modules"),
     ],
   },
 };

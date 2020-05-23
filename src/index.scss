@@ -1,4 +1,4 @@
-@import 'constants.scss';
+@import "constants.scss";
 
 :global {
   body {
@@ -38,7 +38,6 @@
     }
   }
 
-
   h1 {
     display: block;
     margin-bottom: 3rem;
@@ -53,7 +52,9 @@
     color: $blackbox-blue;
     text-decoration: none;
     font-weight: bold;
-    &:hover, &:visited, &:active {
+    &:hover,
+    &:visited,
+    &:active {
       color: $blackbox-blue;
     }
     &:hover {
@@ -86,5 +87,4 @@
   section {
     margin-bottom: 4rem;
   }
-
 }
