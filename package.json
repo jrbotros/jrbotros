@@ -22,7 +22,7 @@
   "homepage": "https://github.com/jrbotros/jrbotros",
   "dependencies": {
     "classnames": "2.2.6",
-    "moment-timezone": "0.5.9",
+    "moment-timezone": "0.5.35",
     "react-favicon": "0.0.18",
     "vivus": "0.4.0"
   },
