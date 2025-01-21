@@ -1,10 +1,11 @@
 import React from 'react';
 
+import type { ResumeType } from '../schema';
+
 import { EducationItem } from './Education';
 import { Job } from './Job';
-import resume from './resume.json';
 
-export const Resume = () => {
+export function Resume({ resume }: { resume: ResumeType }) {
   return (
     <React.Fragment>
       <section className="education">
@@ -23,4 +24,4 @@ export const Resume = () => {
       </section>
     </React.Fragment>
   );
-};
+}

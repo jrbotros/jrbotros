@@ -1,10 +1,12 @@
-import React from 'react';
+import type { ReactNode } from 'react';
+
+import type { EducationType } from '../schema';
 
 import css from './Education.module.scss';
 import { DateRange } from './dates';
 
-export const EducationItem = ({ education }) => {
-  let studyInfo = education.studyType;
+export function EducationItem({ education }: { education: EducationType }) {
+  let studyInfo: ReactNode = education.studyType;
   if (education.studyType) {
     studyInfo = (
       <div className={css.degree}>
@@ -31,4 +33,4 @@ export const EducationItem = ({ education }) => {
       </ul>
     </div>
   );
-};
+}

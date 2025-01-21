@@ -20,7 +20,13 @@ importers:
       vivus:
         specifier: 0.4.0
         version: 0.4.0
+      zod:
+        specifier: 3.24.1
+        version: 3.24.1
     devDependencies:
+      '@types/classnames':
+        specifier: 2.2.0
+        version: 2.2.0
       '@types/node':
         specifier: 22.10.7
         version: 22.10.7
@@ -30,6 +36,9 @@ importers:
       '@types/react-dom':
         specifier: 18.0.6
         version: 18.0.6
+      '@types/vivus':
+        specifier: 0.4.7
+        version: 0.4.7
       '@typescript-eslint/eslint-plugin':
         specifier: 7.18.0
         version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.7.3))(eslint@8.57.0)(typescript@5.7.3)
@@ -1184,6 +1193,9 @@ packages:
   '@rushstack/eslint-patch@1.10.5':
     resolution: {integrity: sha512-kkKUDVlII2DQiKy7UstOR1ErJP8kUKAQ4oa+SQtM0K+lPdmmjj0YnnxBgtTVYH7mUKtbsxeFC9y0AmK7Yb78/A==}
 
+  '@types/classnames@2.2.0':
+    resolution: {integrity: sha512-MFvoUmNDEnETgHkDZlmnLjVSSFcAH/dwDRi+EU1cYc0+wl4J6t1xGSqiGq7oytKSAXZCaHIkclFL0QaKQENDrA==}
+
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
@@ -1213,6 +1225,9 @@ packages:
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
+
+  '@types/vivus@0.4.7':
+    resolution: {integrity: sha512-c0gE1Wd5Jv3752DpoHGY4pTpMfpwE4x+eb9vL1uUrYo0QDUPF/Ty1Dca3gCFnW5E80umraDzpsHi7gWPKgx7WA==}
 
   '@typescript-eslint/eslint-plugin@5.62.0':
     resolution: {integrity: sha512-TiZzBSJja/LbhNPvk6yc0JrX9XqhQ0hdh6M2svYfsHGejaKFIAGd9MQ+ERIMzLGlN/kZoYIgdxFV0PuljTKXag==}
@@ -2959,6 +2974,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
+  zod@3.24.1:
+    resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+
 snapshots:
 
   '@ampproject/remapping@2.3.0':
@@ -4064,6 +4082,8 @@ snapshots:
 
   '@rushstack/eslint-patch@1.10.5': {}
 
+  '@types/classnames@2.2.0': {}
+
   '@types/estree@1.0.6': {}
 
   '@types/json-schema@7.0.15': {}
@@ -4091,6 +4111,8 @@ snapshots:
   '@types/scheduler@0.23.0': {}
 
   '@types/semver@7.5.8': {}
+
+  '@types/vivus@0.4.7': {}
 
   '@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.7.3))(eslint@8.57.0)(typescript@5.7.3)':
     dependencies:
@@ -6252,3 +6274,5 @@ snapshots:
       yargs-parser: 20.2.9
 
   yocto-queue@0.1.0: {}
+
+  zod@3.24.1: {}

@@ -5,6 +5,10 @@ import { Favicon } from './Favicon';
 import { Logo } from './Logo';
 import { Resume } from './Resume';
 import css from './index.module.scss';
+import resumeJson from './resume.json';
+import { ResumeSchema } from './schema';
+
+const typedResume = ResumeSchema.parse(resumeJson);
 
 const Main = () => {
   return (
@@ -14,7 +18,7 @@ const Main = () => {
         <Logo />
       </header>
       <div>
-        <Resume />
+        <Resume resume={typedResume} />
       </div>
     </div>
   );

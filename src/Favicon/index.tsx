@@ -5,10 +5,16 @@ import ReactFavicon from 'react-favicon';
 const FAVICON_COLOR = '#1b5299';
 const FAVICON_TEXT = 'J';
 
-export const Favicon = () => {
+export function Favicon() {
   const iconUrl = useMemo(() => {
     const canvas = document.createElement('canvas');
+
     const drawContext = canvas.getContext('2d');
+    if (!drawContext) {
+      console.error('Could not get 2d context');
+      return '';
+    }
+
     canvas.width = 64;
     canvas.height = 64;
 
@@ -36,4 +42,4 @@ export const Favicon = () => {
   }, []);
 
   return <ReactFavicon url={iconUrl} />;
-};
+}

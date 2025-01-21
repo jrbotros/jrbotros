@@ -1,11 +1,11 @@
 import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Vivus from 'vivus';
 
 import css from './index.module.scss';
 
-export const Logo = () => {
-  const [target, setTarget] = useState();
+export function Logo() {
+  const [target, setTarget] = useState<HTMLDivElement | null>(null);
 
   const [logoDrawn, setLogoDrawn] = useState(false);
 
@@ -27,7 +27,7 @@ export const Logo = () => {
   }, [target]);
 
   const iconClasses = classNames(css.iconGithub, {
-    [css.show]: logoDrawn,
+    [css.show!]: logoDrawn,
   });
 
   return (
@@ -60,4 +60,4 @@ export const Logo = () => {
       </a>
     </div>
   );
-};
+}

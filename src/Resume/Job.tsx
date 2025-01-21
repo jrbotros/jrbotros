@@ -1,14 +1,15 @@
 import React from 'react';
 
+import type { JobProjectType, JobType } from '../schema';
+
 import css from './Job.module.scss';
 import { DateRange } from './dates';
 
-function getImgUrl(path) {
-  const imgUrl = new URL(`/src/img/${path}`, import.meta.url).href;
-  return imgUrl;
+function getImgUrl(path: string) {
+  return new URL(`/src/img/${path}`, import.meta.url).href;
 }
 
-export const Project = ({ project }) => {
+export function Project({ project }: { project: JobProjectType }) {
   return (
     <li>
       <a
@@ -25,19 +26,9 @@ export const Project = ({ project }) => {
       </a>
     </li>
   );
-};
+}
 
-export const Job = ({ job }) => {
-  let projects = null;
-  if (job.projects) {
-    projects = (
-      <ul className={css.projects}>
-        {job.projects.map((project) => (
-          <Project key={project.name} project={project} />
-        ))}
-      </ul>
-    );
-  }
+export function Job({ job }: { job: JobType }) {
   return (
     <div className={css.job}>
       <div className={css.header}>
@@ -51,8 +42,14 @@ export const Job = ({ job }) => {
             <li key={i} dangerouslySetInnerHTML={{ __html: highlight }}></li>
           ))}
         </ul>
-        {projects}
+        {job.projects && (
+          <ul className={css.projects}>
+            {job.projects.map((project) => (
+              <Project key={project.name} project={project} />
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
-};
+}
