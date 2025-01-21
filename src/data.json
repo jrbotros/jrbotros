@@ -23,6 +23,7 @@
       "company": "Kumospace",
       "position": "Senior Software Engineer",
       "startDate": "2021-03-22",
+      "endDate": "2024-11-15",
       "highlights": [
         "Developed UI-rich virtual office platform as the second founding engineer (React, Phaser, Firebase)",
         "Maintained core app infrastructure and monitoring (Terraform + GCP, Sentry)",
@@ -43,6 +44,7 @@
       "company": "Oscar Health",
       "position": "Senior Software Engineer",
       "startDate": "2017-07-24",
+      "endDate": "2021-03-12",
       "highlights": [
         "Currently focusing on shared gRPC infrastructure and tooling (configuration/codegen, monitoring)",
         "Serving as a core owner/contributor of org-wide frontend tooling (React)",
