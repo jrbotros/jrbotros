@@ -1,0 +1,81 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json", "./tsconfig.eslint.json"]
+  },
+
+  "settings": {
+    "import/resolver": "typescript",
+    "react": {
+      "version": "detect"
+    }
+  },
+
+  "rules": {
+    "brace-style": ["warn", "1tbs"],
+    "curly": ["warn", "all"],
+    "no-unused-expressions": [
+      "warn",
+      {
+        "allowShortCircuit": false,
+        "allowTernary": false
+      }
+    ],
+
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+
+    "react/jsx-curly-brace-presence": ["warn", "never"],
+    "react/jsx-no-target-blank": [
+      "warn",
+      {
+        "allowReferrer": true
+      }
+    ],
+    "react/prop-types": "off",
+    "react/hook-use-state": "error",
+    "react/jsx-key": "error",
+    // Keep compatibility with `eslint-config-react-app`
+    "react/no-unescaped-entities": "off",
+    "react/display-name": "off",
+    "react/react-in-jsx-scope": "off",
+
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+
+    "prettier/prettier": "error"
+  }
+}
