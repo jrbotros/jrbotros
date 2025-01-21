@@ -1,37 +1,37 @@
-import classNames from "classnames";
-import React, { useEffect, useState } from "react";
-import Vivus from "vivus";
+import classNames from 'classnames';
+import React, { useEffect, useState } from 'react';
+import Vivus from 'vivus';
 
-import css from "./index.scss";
+import css from './index.module.scss';
 
 export const Logo = () => {
-  const ref = React.createRef();
+  const [target, setTarget] = useState();
 
   const [logoDrawn, setLogoDrawn] = useState(false);
 
   useEffect(() => {
-    if (ref.current) {
+    if (target) {
       new Vivus(
-        "logo",
+        'logo',
         {
-          type: "delayed",
+          type: 'delayed',
           duration: 200,
           animTimingFunction: Vivus.EASE,
           onReady: function (myVivus) {
-            myVivus.el.style.visibility = "inherit";
+            myVivus.el.style.visibility = 'inherit';
           },
         },
-        () => setLogoDrawn(true)
+        () => setLogoDrawn(true),
       );
     }
-  }, [ref.current]);
+  }, [target]);
 
   const iconClasses = classNames(css.iconGithub, {
     [css.show]: logoDrawn,
   });
 
   return (
-    <div className={css.logoWrapper} ref={ref}>
+    <div className={css.logoWrapper} ref={setTarget}>
       <svg
         id="logo"
         className={css.logo}

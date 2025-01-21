@@ -1,4 +1,4 @@
-@import "constants.scss";
+@import 'src/constants.scss';
 
 .job {
   position: relative;
@@ -38,7 +38,7 @@
     padding: 0;
     padding-left: 5px;
     &::before {
-      content: "–";
+      content: '–';
       position: absolute;
       left: -5px;
     }

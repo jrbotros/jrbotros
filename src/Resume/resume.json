@@ -57,7 +57,7 @@
           "name": "Orchestra",
           "description": "An open source system to orchestrate teams of experts and machines on complex projects",
           "website": "http://orchestra.b12.io",
-          "image": "img/orchestra.jpg"
+          "image": "orchestra.jpg"
         }
       ]
     },
@@ -75,7 +75,7 @@
           "name": "VIALS",
           "description": "A novel visualization tool for alternative gene splicing study",
           "website": "http://vials.io/info",
-          "image": "img/vials.png"
+          "image": "vials.png"
         }
       ]
     },
@@ -104,13 +104,13 @@
           "name": "Responsive Redesign",
           "description": "Redesign of The Crimson's web properties",
           "website": "http://web.archive.org/web/20140625091927/http://www.thecrimson.com/",
-          "image": "img/crimson.png"
+          "image": "crimson.png"
         },
         {
           "name": "Hacking Harvard",
           "description": "Sample design created for a news feature",
           "website": "http://features.thecrimson.com/2013/hackers/",
-          "image": "img/hackers.png"
+          "image": "hackers.png"
         }
       ]
     },

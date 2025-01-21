@@ -9,20 +9,13 @@
     "doc": "doc"
   },
   "scripts": {
-    "deploy": "webpack && aws --profile personal s3 sync site/ s3://www.jrbotros.com --acl public-read",
-    "start": "VITE_CJS_TRACE=true vite",
+    "deploy": "aws --profile jrbotros s3 sync build/ s3://www.jrbotros.com --acl public-read",
+    "start": "vite",
     "build": "vite build",
-    "build:profiling": "VITE_BUILD_TYPE=profiling vite build",
-    "preview": "vite preview",
-    "analyze": "NODE_OPTIONS=\"--max-old-space-size=9216\" VITE_BUILD_TYPE=analyze pnpm run build && source-map-explorer 'build/assets/*.js' --no-border-checks",
-    "lint": "eslint \"**/*.{ts,tsx,js,jsx}\" --max-warnings=0 && tsx ./detectImportCycles.ts",
-    "format": "eslint . --max-warnings=0 --fix && prettier --write .",
+    "lint": "eslint \"**/*.{ts,tsx,js,jsx}\" --max-warnings=0",
+    "format": "eslint \"**/*.{ts,tsx,js,jsx}\" --max-warnings=0 --fix && prettier --write .",
     "clean": "git clean -xdf build/ node_modules/",
-    "test:unit": "vitest",
-    "pretest:integration": "playwright install --with-deps",
-    "test:integration": "playwright test",
-    "typecheck": "tsc --noEmit",
-    "check:deps": "tsx ./detectImportCycles.ts"
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -36,7 +29,7 @@
   "homepage": "https://github.com/jrbotros/jrbotros",
   "dependencies": {
     "classnames": "2.2.6",
-    "moment-timezone": "0.5.9",
+    "date-fns": "4.1.0",
     "react-favicon": "0.0.18",
     "vivus": "0.4.0"
   },

@@ -1,9 +1,12 @@
-import { map } from "lodash";
+import React from 'react';
 
-import React from "react";
+import css from './Job.module.scss';
+import { DateRange } from './dates';
 
-import { DateRange } from "./dates";
-import css from "./Job.scss";
+function getImgUrl(path) {
+  const imgUrl = new URL(`/src/img/${path}`, import.meta.url).href;
+  return imgUrl;
+}
 
 export const Project = ({ project }) => {
   return (
@@ -13,7 +16,7 @@ export const Project = ({ project }) => {
         rel="noopener nofollower noreferrer"
         href={project.website}
         className={css.project}
-        style={{ backgroundImage: `url(${project.image})` }}
+        style={{ backgroundImage: `url(${getImgUrl(project.image)})` }}
       >
         <div className={css.projectInfo}>
           <div className={css.projectName}>{project.name}</div>
@@ -29,7 +32,7 @@ export const Job = ({ job }) => {
   if (job.projects) {
     projects = (
       <ul className={css.projects}>
-        {map(job.projects, (project) => (
+        {job.projects.map((project) => (
           <Project key={project.name} project={project} />
         ))}
       </ul>
@@ -44,7 +47,7 @@ export const Job = ({ job }) => {
       <div className={css.details}>
         <span className={css.position}>{job.position}</span>
         <ul className={css.highlights}>
-          {map(job.highlights, (highlight, i) => (
+          {job.highlights.map((highlight, i) => (
             <li key={i} dangerouslySetInnerHTML={{ __html: highlight }}></li>
           ))}
         </ul>

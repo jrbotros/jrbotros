@@ -1,15 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import { DateRange } from "./dates";
-
-import css from "./Education.scss";
+import css from './Education.module.scss';
+import { DateRange } from './dates';
 
 export const EducationItem = ({ education }) => {
   let studyInfo = education.studyType;
   if (education.studyType) {
     studyInfo = (
       <div className={css.degree}>
-        {education.studyType} {education.area ? "in " + education.area : ""}
+        {education.studyType} {education.area ? 'in ' + education.area : ''}
       </div>
     );
   }

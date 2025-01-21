@@ -1,34 +1,27 @@
 import path from 'path';
 
 import react from '@vitejs/plugin-react';
-import { defineConfig, loadEnv, type AliasOptions } from 'vite';
+import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
 
-const buildTypes = ['production', 'profiling', 'analyze'] as const;
-type BuildType = (typeof buildTypes)[number];
-
-function isBuildType(value: string): value is BuildType {
-  return buildTypes.includes(value as BuildType);
-}
-
-
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd());
-
+export default defineConfig(() => {
   return {
     plugins: [
       checker({
-        eslint: { lintCommand: 'eslint . --max-warnings=0' },
+        eslint: {
+          lintCommand: 'eslint "**/*.{ts,tsx,js,jsx}" --max-warnings=0',
+        },
         typescript: true,
       }),
-      react(),
+      react({ jsxRuntime: 'classic' }),
       viteTsconfigPaths({
         root: process.cwd(),
       }),
     ],
     build: {
       outDir: 'build',
+      sourcemap: process.env.node_env !== 'production',
       rollupOptions: {
         onwarn({ loc }) {
           return loc?.file?.includes('node_modules');
@@ -48,7 +41,6 @@ export default defineConfig(({ mode }) => {
     },
     test: {
       environment: 'jsdom',
-      testMatch: ['./src/**/*.test.{js,ts,tsx}'],
       globals: false,
       exclude: ['node_modules'],
     },

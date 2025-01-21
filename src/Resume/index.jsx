@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { EducationItem } from "./Education";
-import { Job } from "./Job";
-
-import resume from "./resume.json";
+import { EducationItem } from './Education';
+import { Job } from './Job';
+import resume from './resume.json';
 
 export const Resume = () => {
   return (
