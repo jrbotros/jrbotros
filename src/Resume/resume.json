@@ -20,13 +20,25 @@
   },
   "work": [
     {
+      "company": "Kumospace",
+      "position": "Senior Software Engineer",
+      "startDate": "2021-03-22",
+      "highlights": [
+        "Developed UI-rich virtual office platform as the second founding engineer (React, Phaser, Firebase)",
+        "Maintained core app infrastructure and monitoring (Terraform + GCP, Sentry)",
+        "Established and enforced best practices for frontend performance",
+        "Set up integrations with WebRTC, chat, other workplace collaboration vendors",
+        "Team lead for various full-stack teams of 2–5 engineers"
+      ]
+    },
+    {
       "company": "Oscar Health",
       "position": "Senior Software Engineer",
       "startDate": "2017-07-24",
       "highlights": [
         "Currently focusing on shared gRPC infrastructure and tooling (configuration/codegen, monitoring)",
-        "Serving as a core owner/contributor of org-wide frontend tooling (React + hooks)",
-        "Acted as team lead for provider-facing care delivery app with EHR functionality (React + hooks, Python/Flask, Thrift/gRPC)",
+        "Serving as a core owner/contributor of org-wide frontend tooling (React)",
+        "Acted as team lead for provider-facing care delivery app with EHR functionality (React, Python/Flask, Thrift/gRPC)",
         "Rebuilt telemedicine system architecture from the ground up (Thrift/gRPC, Aurora/Mesos, Confluent Kafka)"
       ]
     },
