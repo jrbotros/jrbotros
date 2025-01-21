@@ -29,6 +29,14 @@
         "Established and enforced best practices for frontend performance",
         "Set up integrations with WebRTC, chat, other workplace collaboration vendors",
         "Team lead for various full-stack teams of 2–5 engineers"
+      ],
+      "projects": [
+        {
+          "name": "Kumospace",
+          "description": "All-purpose virtual office platform and business communication tool",
+          "website": "http://www.kumospace.com",
+          "image": "kumospace.png"
+        }
       ]
     },
     {
