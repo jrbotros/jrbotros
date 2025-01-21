@@ -5,10 +5,10 @@
 Start the development server with:
 
 ```
-npx webpack-dev-server
+npm run start
 ```
 
-The site will be served at `localhost:8000`.
+The site will be served at `localhost:3000`.
 
 ## Deploy
 
