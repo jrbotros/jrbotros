@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import type { EducationType } from '../schema';
+import type { EducationType } from 'schema';
 
 import css from './Education.module.scss';
 import { DateRange } from './dates';

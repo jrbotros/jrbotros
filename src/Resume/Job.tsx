@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { JobProjectType, JobType } from '../schema';
+import type { JobProjectType, JobType } from 'schema';
 
 import css from './Job.module.scss';
 import { DateRange } from './dates';

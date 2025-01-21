@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { ResumeType } from '../schema';
+import type { ResumeType } from 'schema';
 
 import { EducationItem } from './Education';
 import { Job } from './Job';
